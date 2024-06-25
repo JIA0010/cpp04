@@ -2,7 +2,7 @@
 
 
 Cat::Cat() : Animal() {
-    this->type = "Cat";
+    this->_type = "Cat";
     std::cout << "Cat constructor called" << std::endl;
 }
 
@@ -17,7 +17,7 @@ Cat::Cat(const Cat &copy) {
 
 Cat &Cat::operator=(const Cat &copy) {
     if (this != &copy)
-        this->type = copy.type;
+        this->_type = copy._type;
     std::cout << "Cat assignation operator called" << std::endl;
     return *this;
 }
