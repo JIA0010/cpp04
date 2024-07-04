@@ -1,5 +1,6 @@
 #include "Dog.hpp"
 
+
 Dog::Dog() : Animal(), _brain(new Brain()){
     this->type = "Dog";
     std::cout << "Dog constructor called" << std::endl;
@@ -26,5 +27,9 @@ Dog &Dog::operator=(const Dog &copy) {
 
 void Dog::makeSound() const {
     std::cout << "Woof Woof" << std::endl;
+}
+
+Brain* Dog::getBrain() const {
+    return this->_brain;
 }
 
