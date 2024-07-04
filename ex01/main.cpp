@@ -1,4 +1,3 @@
-#include "Animal.hpp"
 #include "Cat.hpp"
 #include "Dog.hpp"
 #include "WrongCat.hpp"
@@ -43,16 +42,19 @@ int main() {
     // 配列の前半に Dog オブジェクトを作成
     for (int i = 0; i < arraySize / 2; ++i) {
         animals[i] = new Dog();
+        std::cout << "---------Dog created----------" << std::endl;
     }
 
     // 配列の後半に Cat オブジェクトを作成
     for (int i = arraySize / 2; i < arraySize; ++i) {
         animals[i] = new Cat();
+        std::cout << "---------Cat created----------" << std::endl;
     }
 
     // 配列のすべてのオブジェクトを削除
     for (int i = 0; i < arraySize; ++i) {
         delete animals[i];
+        std::cout << "---------Animal deleted----------" << std::endl;
     }
 
     testDeepCopy();
